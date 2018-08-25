@@ -19,6 +19,7 @@ module.exports = function (app) {
     });
 
     app.get("/api/userData", (req, res) => {
+        console.log(req.user);
         if (!req.user) {
             res.json({ "message": "unauth acess" });
         }
